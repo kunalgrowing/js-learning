@@ -2,41 +2,64 @@
 
 // 7 types : String, Number, BigInt, Symbol, Boolean, null, undefined
 
-const score = 100
-const scoreValue = 100.3
-const isLoggedIn = false
-const outsideTemp = null
+// const score = 100
+// const scoreValue = 100.3
+// const isLoggedIn = false
+// const outsideTemp = null
 
-let userEmail;
+// let userEmail;
 
-const id = Symbol('123')
-const anotherId = Symbol('123')
+// const id = Symbol('123')
+// const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
-const bigNumber = 3472585743256843265746n
+// const bigNumber = 3472585743256843265746n
 
 // Reference (non primitive)
 
 // Objects, Arrays, Functions
 
-const heroes = ["kunal", "singh", "tawar"];
+// const heroes = ["kunal", "singh", "tawar"];
 
-let myObj = {
-  name: "kunal",
-  age: 22
+// let myObj = {
+//   name: "kunal",
+//   age: 22
+// }
+
+// const myFunction = function() {
+//   console.log("Hello world!");
+// }
+
+// console.log(typeof bigNumber);
+
+// console.log(typeof outsideTemp);
+
+// console.log(typeof scoreValue);
+
+// console.log(typeof myFunction);
+
+// console.log(typeof anotherId);
+
+
+// ************************** Stack & Heap memory in JS ***************************
+
+// Stack (primitive) & Heap (non-primitive)
+
+let myYoutubeName = "kunalsinghtawardotcom"   // gets stored into stack as it is of primitive type variables
+let anotherName = myYoutubeName
+anotherName = "kunalgrowing"
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+  email: "user@google.com",
+  upi: "user@ybl"
 }
 
-const myFunction = function() {
-  console.log("Hello world!");
-}
+userTwo = userOne
 
-console.log(typeof bigNumber);
+userTwo.email = "kunal@google.com"
 
-console.log(typeof outsideTemp);
-
-console.log(typeof scoreValue);
-
-console.log(typeof myFunction);
-
-console.log(typeof anotherId);
+console.log(userOne.email);
+console.log(userTwo.email);
